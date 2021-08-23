@@ -1,7 +1,6 @@
 const arr = [5, 11, 2, 8, 1];
 
 function adn(arr, type) {
-    //const newArr = arr.slice(); //копирую
     const newArr = [...arr];
 
     if (type == 'Asc') {

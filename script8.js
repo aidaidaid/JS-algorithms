@@ -1,4 +1,4 @@
-const first = factory(15); //замыкание
+const first = factory(15);
 const arr = [30, 45, 60];
 
 function factory(n) {
