@@ -8,18 +8,11 @@ function numToString(num) {
 
     if (myNum.length == 3) {
         if (myNum[1] == '1') {
-            string1 = hundreds[myNum[0]];
-            string2 = dozens1[myNum[2]];
-            myNum = string1 + ' ' + string2;
+            myNum = hundreds[myNum[0]] + ' ' + dozens1[myNum[2]];
         } else if (myNum[1] == '0') {
-            string1 = hundreds[myNum[0]];
-            string2 = units[myNum[2]];
-            myNum = string1 + ' ' + string2;
+            myNum = hundreds[myNum[0]] + ' ' + units[myNum[2]];
         } else {
-            string1 = hundreds[myNum[0]];
-            string2 = dozens2[myNum[1]];
-            string3 = units[myNum[2]];
-            myNum = string1 + ' ' + string2 + ' ' + string3;
+            myNum = hundreds[myNum[0]] + ' ' + dozens2[myNum[1]] + ' ' + units[myNum[2]];
         }
     } else if (myNum.length == 2) {
         if (num < 10) {
@@ -27,13 +20,10 @@ function numToString(num) {
         } else if (num <= 20) {
             myNum = dozens1[myNum[1]];
         } else {
-            string1 = dozens2[myNum[0]];
-            string2 = units[myNum[1]];
-            myNum = string1 + ' ' + string2;
+            myNum = dozens2[myNum[0]] + ' ' + units[myNum[1]];
         }
     } else if (myNum.length == 1) {
-        string1 = units[myNum[0]];
-        myNum = string1;
+        myNum = units[myNum[0]];
     }
 
     return myNum.charAt(0).toUpperCase() + myNum.slice(1);
